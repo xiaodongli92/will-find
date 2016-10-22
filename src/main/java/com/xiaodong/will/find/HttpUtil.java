@@ -1,4 +1,4 @@
-package com.souyidai.fk.util;
+package com.xiaodong.will.find;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.Consts;
@@ -140,6 +140,8 @@ public class HttpUtil {
         }
         HttpGet get = new HttpGet(url);
         HttpResponse response = httpClient.execute(get);
+        System.out.println(response.getStatusLine());
+        System.out.println(response.getEntity().getContentType());
         return EntityUtils.toString(response.getEntity());
     }
 
