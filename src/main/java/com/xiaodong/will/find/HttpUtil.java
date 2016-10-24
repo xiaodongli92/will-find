@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @Description: http公用方法
@@ -134,15 +135,19 @@ public class HttpUtil {
         return EntityUtils.toString(response.getEntity());
     }
 
-    public static String get(String url) throws IOException {
-        if (StringUtils.isBlank(url)) {
-            return "url不能为空";
+    public static String get(String url){
+        try {
+            if (StringUtils.isBlank(url)) {
+                return "url不能为空";
+            }
+            HttpGet get = new HttpGet(url);
+            get.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36");
+            HttpResponse response = httpClient.execute(get);
+            return EntityUtils.toString(response.getEntity());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
-        HttpGet get = new HttpGet(url);
-        HttpResponse response = httpClient.execute(get);
-        System.out.println(response.getStatusLine());
-        System.out.println(response.getEntity().getContentType());
-        return EntityUtils.toString(response.getEntity());
     }
 
     /**
@@ -156,5 +161,27 @@ public class HttpUtil {
             params.add(new BasicNameValuePair(entry.getKey(),entry.getValue()));
         }
         return params;
+    }
+
+    public static String buildQuery(Map<String,String> params) {
+        if (null == params || params.isEmpty()) {
+            return null;
+        }
+        StringBuilder query = new StringBuilder();
+        boolean hasParam = false;
+        Set<Map.Entry<String,String>> entries = params.entrySet();
+        for (Map.Entry<String,String> entry:entries) {
+            String name = entry.getKey();
+            String value = entry.getValue();
+            if (StringUtils.isNoneBlank(name, value)) {
+                if (hasParam) {
+                    query.append("&");
+                } else {
+                    hasParam = true;
+                }
+                query.append(name).append("=").append(value);
+            }
+        }
+        return query.toString();
     }
 }
