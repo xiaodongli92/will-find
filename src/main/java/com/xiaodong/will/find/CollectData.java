@@ -19,9 +19,18 @@ public class CollectData {
 
 
     public static void main(String[] args) throws Exception {
-        List<Recode> list = getAllRecode("310240407");
-        System.out.println(list);
-        System.out.println(list.size());
+        for (int i=0; i<310240407; i++) {
+            int totalCnt = getTotalCnt(String.valueOf(i));
+            if (totalCnt != 0) {
+                System.out.println(i);
+                System.out.println(totalCnt);
+                break;
+            }
+        }
+        System.out.println("the end");
+//        List<Recode> list = getAllRecode("310240407");
+//        System.out.println(list);
+//        System.out.println(list.size());
     }
 
     private static List<Recode> getAllRecode(String period) {
