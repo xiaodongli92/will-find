@@ -1,4 +1,4 @@
-package com.xiaodong.will.find.model;
+package com.xiaodong.will.find.model.json;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Result {
 
     private int pageNum;
 
-    private List<Recode> list;
+    private List<Period> list;
 
     @Override
     public String toString() {
@@ -49,11 +49,11 @@ public class Result {
         this.pageNum = pageNum;
     }
 
-    public List<Recode> getList() {
+    public List<Period> getList() {
         return list;
     }
 
-    public void setList(List<Recode> list) {
+    public void setList(List<Period> list) {
         this.list = list;
     }
 }

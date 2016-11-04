@@ -1,9 +1,9 @@
-package com.xiaodong.will.find.model;
+package com.xiaodong.will.find.model.json;
 
 /**
  * 返回结果
  */
-public class Netease {
+public class Periods {
 
     private int code;
 
@@ -11,7 +11,7 @@ public class Netease {
 
     @Override
     public String toString() {
-        return "Netease{" +
+        return "Periods{" +
                 "code=" + code +
                 ", result=" + result +
                 '}';

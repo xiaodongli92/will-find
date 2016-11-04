@@ -1,4 +1,4 @@
-package com.xiaodong.will.find;
+package com.xiaodong.will.find.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.Consts;

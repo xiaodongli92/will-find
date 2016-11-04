@@ -1,9 +1,13 @@
-package com.xiaodong.will.find.model;
+package com.xiaodong.will.find.model.json;
+
+import com.xiaodong.will.find.model.pojo.User;
 
 /**
  * 一条记录
  */
-public class Recode {
+public class Period {
+
+    private String period;
 
     private int num;
 
@@ -17,16 +21,36 @@ public class Recode {
 
     private User user;
 
+    private String uid;
+
     @Override
     public String toString() {
-        return "Recode{" +
-                "num=" + num +
+        return "Period{" +
+                "period='" + period + '\'' +
+                ", num=" + num +
                 ", time='" + time + '\'' +
                 ", rid=" + rid +
                 ", device='" + device + '\'' +
                 ", regularBuy=" + regularBuy +
                 ", user=" + user +
+                ", uid='" + uid + '\'' +
                 '}';
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
     }
 
     public int getNum() {

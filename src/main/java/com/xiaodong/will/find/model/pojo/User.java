@@ -1,38 +1,59 @@
-package com.xiaodong.will.find.model;
+package com.xiaodong.will.find.model.pojo;
+
+import javax.persistence.*;
 
 /**
  * 用户
  */
+@Entity
+@Table(name = "USER")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //自增长
+    private long id = 0 ;
+
+    @Column(length = 128)
     private String uid;
 
+    @Column(length = 128)
     private String avatarName;
 
+    @Column
     private int freeCoin;
 
+    @Column(length = 64)
     private String IPAddress;
 
+    @Column
     private int isFirstLogin;
 
+    @Column(length = 128)
     private String nickname;
 
+    @Column
     private int coin;
 
+    @Column(length = 64)
     private String IP;
 
+    @Column(length = 128)
     private String avatarPrefix;
 
+    @Column(length = 128)
     private String cid;
 
+    @Column
     private int bonusNum;
 
+    @Column(length = 20)
     private String mobile;
 
     @Override
     public String toString() {
         return "User{" +
-                "uid='" + uid + '\'' +
+                "id=" + id +
+                ", uid='" + uid + '\'' +
                 ", avatarName='" + avatarName + '\'' +
                 ", freeCoin=" + freeCoin +
                 ", IPAddress='" + IPAddress + '\'' +
@@ -45,6 +66,14 @@ public class User {
                 ", bonusNum=" + bonusNum +
                 ", mobile='" + mobile + '\'' +
                 '}';
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getUid() {
