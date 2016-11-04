@@ -67,6 +67,7 @@
     <bean id="hibernateJpaVendorAdapter"
           class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
         <property name="database" value="${jdbc.database}" />
+        <property name="showSql" value="false" />
     </bean>
 
     <bean id="validator"

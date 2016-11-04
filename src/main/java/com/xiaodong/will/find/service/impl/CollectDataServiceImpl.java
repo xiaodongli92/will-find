@@ -37,7 +37,7 @@ public class CollectDataServiceImpl implements CollectDataService {
             List<Record> records = ReflexUtil.convertList(list, Record.class);
             List<User> users = DataUtil.userList(list);
             userDao.save(users);
-            recordDao.save(records);
+//            recordDao.save(records);
         } catch (Exception e) {
             LOG.error("",e);
         }

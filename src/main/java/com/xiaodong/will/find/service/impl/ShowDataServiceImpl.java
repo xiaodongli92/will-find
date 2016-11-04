@@ -21,16 +21,19 @@ public class ShowDataServiceImpl implements ShowDataService {
 
     @Override
     public List<Record> findAll() {
-        return recordDao.allRecord();
+//        return recordDao.allRecord();
+        return null;
     }
 
     @Override
     public List<Record> findByParam(SearchParam searchParam, PageParam pageParam) {
-        return recordDao.pageByParam(pageParam.getPageNo(), pageParam.getPageSize());
+//        return recordDao.pageByParam(pageParam.getPageNo(), pageParam.getPageSize());
+        return null;
     }
 
     @Override
     public long count(SearchParam searchParam) {
-        return recordDao.count(searchParam);
+//        return recordDao.count(searchParam);
+        return 0L;
     }
 }

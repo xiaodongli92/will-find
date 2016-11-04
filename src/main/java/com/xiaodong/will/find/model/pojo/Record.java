@@ -17,19 +17,19 @@ public class Record {
     private String period;
 
     @Column
-    private int num;
+    private Integer num;
 
     @Column(length = 30)
     private String time;
 
     @Column
-    private int rid;
+    private Integer rid;
 
     @Column(length = 128)
     private String device;
 
     @Column
-    private int regularBuy;
+    private Integer regularBuy;
 
     @Column(length = 128)
     private String uid;
@@ -64,11 +64,11 @@ public class Record {
         this.period = period;
     }
 
-    public int getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 
@@ -80,11 +80,11 @@ public class Record {
         this.time = time;
     }
 
-    public int getRid() {
+    public Integer getRid() {
         return rid;
     }
 
-    public void setRid(int rid) {
+    public void setRid(Integer rid) {
         this.rid = rid;
     }
 
@@ -96,11 +96,11 @@ public class Record {
         this.device = device;
     }
 
-    public int getRegularBuy() {
+    public Integer getRegularBuy() {
         return regularBuy;
     }
 
-    public void setRegularBuy(int regularBuy) {
+    public void setRegularBuy(Integer regularBuy) {
         this.regularBuy = regularBuy;
     }
 

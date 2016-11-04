@@ -20,19 +20,19 @@ public class User {
     private String avatarName;
 
     @Column
-    private int freeCoin;
+    private Integer freeCoin;
 
     @Column(length = 64)
     private String IPAddress;
 
     @Column
-    private int isFirstLogin;
+    private Integer isFirstLogin;
 
     @Column(length = 128)
     private String nickname;
 
     @Column
-    private int coin;
+    private Integer coin;
 
     @Column(length = 64)
     private String IP;
@@ -44,7 +44,7 @@ public class User {
     private String cid;
 
     @Column
-    private int bonusNum;
+    private Integer bonusNum;
 
     @Column(length = 20)
     private String mobile;
@@ -92,11 +92,11 @@ public class User {
         this.avatarName = avatarName;
     }
 
-    public int getFreeCoin() {
+    public Integer getFreeCoin() {
         return freeCoin;
     }
 
-    public void setFreeCoin(int freeCoin) {
+    public void setFreeCoin(Integer freeCoin) {
         this.freeCoin = freeCoin;
     }
 
@@ -108,11 +108,11 @@ public class User {
         this.IPAddress = IPAddress;
     }
 
-    public int getIsFirstLogin() {
+    public Integer getIsFirstLogin() {
         return isFirstLogin;
     }
 
-    public void setIsFirstLogin(int isFirstLogin) {
+    public void setIsFirstLogin(Integer isFirstLogin) {
         this.isFirstLogin = isFirstLogin;
     }
 
@@ -124,11 +124,11 @@ public class User {
         this.nickname = nickname;
     }
 
-    public int getCoin() {
+    public Integer getCoin() {
         return coin;
     }
 
-    public void setCoin(int coin) {
+    public void setCoin(Integer coin) {
         this.coin = coin;
     }
 
@@ -156,11 +156,11 @@ public class User {
         this.cid = cid;
     }
 
-    public int getBonusNum() {
+    public Integer getBonusNum() {
         return bonusNum;
     }
 
-    public void setBonusNum(int bonusNum) {
+    public void setBonusNum(Integer bonusNum) {
         this.bonusNum = bonusNum;
     }
 
