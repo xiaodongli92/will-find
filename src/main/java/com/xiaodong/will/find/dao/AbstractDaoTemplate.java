@@ -21,7 +21,7 @@ public abstract class AbstractDaoTemplate <T> implements AbstractDaoInter<T> {
 
     @Override
     public <V> V findOne(long id, Class<V> clazz) {
-        String sql =
+//        String sql =
         return template.queryForObject("", clazz);
     }
 }
